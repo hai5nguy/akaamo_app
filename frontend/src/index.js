@@ -8,7 +8,7 @@ import './index.html';
 
 import './pwa/manifest.json';
 import './pwa/serviceworker.js';
-import './pwa/icon.png';
+import './pwa/icon-347x348.png';
 
 
 
