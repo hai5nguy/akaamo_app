@@ -44,6 +44,7 @@
     "babel-preset-react": "^6.23.0",
     "file-loader": "^1.1.5",
     "mocha": "^4.0.1",
+    "moment": "^2.19.1",
     "oauth": "^0.9.15",
     "react-hot-loader": "^3.0.0-beta.6",
     "react-router": "^4.2.0",
