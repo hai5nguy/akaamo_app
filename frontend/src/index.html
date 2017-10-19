@@ -9,7 +9,6 @@
         <div id="root"></div>
         <script src="app.js"></script>
         <script type="text/javascript">
-
             if ('serviceWorker' in navigator) {
                 navigator.serviceWorker.register('/serviceworker.js')
                     .then(function(registration) {
@@ -19,11 +18,6 @@
                         console.log('Service worker registration failed, error:', error);
                     });
             }
-
-
-            
-
-            // navigator.serviceWorker.register('/serviceworker.js')
         </script>
     </body>
 </html>
