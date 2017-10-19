@@ -1,9 +1,35 @@
-.Collapsible__trigger {
-	width: 98%;
+.Collapsible {
 	background-color: #fdb6d4;
-	color: white;
-	padding-left: 2%;
+	padding: 8px;
+	margin-bottom: 20px;
 }
+
+.Collapsible__trigger {
+	display: block;
+	font-weight: 400;
+	text-decoration: none;
+	color: white;
+	position: relative;
+	border: 1px solid white;
+	padding: 10px;
+
+	&:after {
+		font-family: 'FontAwesome';
+		content: '\f107';
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		display: block;
+		transition: transform 300ms;
+	}
+
+	&.is-open {
+		&:after {
+			transform: rotateZ(180deg);
+		}
+	}
+}
+
 
 .Collapsible__contentInner {
 	padding: 10px;
