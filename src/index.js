@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
-import Root from './components/Root'
+import Root from './containers/Root'
 
 import './index.html';
 
@@ -24,5 +24,5 @@ const render = Component => {
 render(Root)
 
 if (module.hot) {
-  module.hot.accept('./components/Root', () => { render(Root) })
+  module.hot.accept('./containers/Root', () => { render(Root) })
 }
