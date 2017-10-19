@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --history-api-fallback --open"
+    "start": "webpack-dev-server --hot --history-api-fallback --open",
+    "test": "mocha ./backend/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "babel-polyfill": "^6.23.0",
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "mocha": "^4.0.1",
     "react-hot-loader": "^3.0.0-beta.6",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
