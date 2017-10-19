@@ -1,28 +1,24 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { AppContainer } from 'react-hot-loader';
 
-import Root from './containers/Root'
-
+import App from './app';
+import { store, history } from './store/store';
 import './index.html';
 
+//needed for Progressive Web App
 import './pwa/manifest.json';
 import './pwa/serviceworker.js';
 import './pwa/icon-347x348.png';
 
-
-
-const render = Component => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('root')
-  )
-}
-
-render(Root)
+ReactDOM.render(
+  <AppContainer>
+    <App />
+  </AppContainer>,
+  document.getElementById('root')
+);
 
 if (module.hot) {
-  module.hot.accept('./containers/Root', () => { render(Root) })
+  module.hot.accept();
+  // module.hot.accept('./containers/Root', () => { render(App) })
 }
