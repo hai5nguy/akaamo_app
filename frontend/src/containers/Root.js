@@ -3,12 +3,14 @@ import React from 'react';
 import NavMenu from '../components/menu';
 import About from '../components/about';
 import Home from '../components/home';
+import Calendar from '../components/calendar';
 
 import '../styles/app.scss';
 
 const contentMap = {
   'home': <Home />,
-  'about': <About />
+  'about': <About />,
+  'calendar': <Calendar />
 };
 
 class Root extends React.Component {

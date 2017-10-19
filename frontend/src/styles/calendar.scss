@@ -1,0 +1,19 @@
+.event-block {
+	border: 1px solid grey;
+	background-color: #FAEBF1;
+	padding: 6px;
+}
+
+.event-info {
+	margin-bottom: 7px;
+	font-size: small;
+	font-weight: 500;
+
+	&.event-time {
+		color: grey;
+	}
+
+	&.event-title {
+		font-weight: 600;
+	}
+}
