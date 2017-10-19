@@ -14,7 +14,8 @@ body {
 	position: absolute;
 	left: 89px;
 	top: 41px;
-
+    width: calc(100% - 89px);
+	
 	.content-header {
 		color: #00b048;
 	}

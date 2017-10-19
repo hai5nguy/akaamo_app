@@ -1,5 +1,10 @@
 .home {
     .home-logo {
-        background: red;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 195px;
+        width: 100%;
+        background-image: url('../assets/AMO-Logo-no-circle.png');
+        background-position-x: center;
     }
 }
