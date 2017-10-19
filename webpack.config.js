@@ -1,5 +1,7 @@
-const webpack = require('webpack')
-const path = require('path')
+const webpack = require('webpack');
+const path = require('path');
+const { resolve } = require('path');
+
 
 module.exports = {
   devtool: 'source-map',
@@ -11,12 +13,30 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './frontend/dist'),
     filename: '[name].js'
   },
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      {
+        test: /\.html$/,
+        use: [ 'file-loader?name=[name].[ext]' ],
+        include: /src/
+      },
+      {
+        test: [
+            resolve(__dirname, 'src/pwa/'),
+        ],
+        use: [ 'file-loader?name=[name].[ext]' ]                
+      },
+      {
+        test: /\.(png|ico|svg|gif)$/,
+        use: [ 'url-loader?limit=10000' ],
+        include: [
+            resolve(__dirname, 'src/images/')
+        ]
+      }
     ]
   }
 }

@@ -4,6 +4,14 @@ import { AppContainer } from 'react-hot-loader'
 
 import Root from './components/Root'
 
+import './index.html';
+
+import './pwa/manifest.json';
+import './pwa/serviceworker.js';
+import './pwa/icon.png';
+
+
+
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
