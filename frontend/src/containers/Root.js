@@ -19,7 +19,8 @@ class Root extends React.Component {
         selectedContent: {
             page: 'home',
             props: ''
-        }
+        },
+        isMenuOpen: false
     };
 
     this.setContent = this.setContent.bind(this);
@@ -30,17 +31,18 @@ class Root extends React.Component {
       props: event.target.getAttribute('data-passProps')
     };
     this.setState({
-        selectedContent
+        selectedContent,
+        isMenuOpen: false
     });
   }
   render () {
-    const { selectedContent } = this.state;
+    const { isMenuOpen, selectedContent } = this.state;
     const passingProps = {};
     passingProps[selectedContent.props] = this.state[selectedContent.props];
     const content = React.cloneElement(contentMap[selectedContent.page], passingProps);
     
     return (<div className="root">
-      <NavMenu setContent={this.setContent}/>
+      <NavMenu setContent={this.setContent} isMenuOpen={isMenuOpen}/>
       <div id="content">
         {content}
       </div>

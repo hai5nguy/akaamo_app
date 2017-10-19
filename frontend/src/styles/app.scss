@@ -1,4 +1,22 @@
-.about-text {
+body {
 	font-size: large;
 	font-weight: bold;
+	
+	p {
+		color: #00b048;
+	}
+}
+
+#content {
+	position: absolute;
+	left: 89px;
+	top: 41px;
+
+	.content-header {
+		color: #00b048;
+	}
+	
+	.content-body {
+		margin-top: 34px;
+	}
 }
