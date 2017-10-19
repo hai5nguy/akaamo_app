@@ -1,22 +1,23 @@
 body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
 	font-size: large;
 	font-weight: bold;
-	
-	p {
-		color: #00b048;
-	}
 }
 
 #content {
 	position: absolute;
 	left: 89px;
 	top: 41px;
-
+    width: calc(100% - 89px);
+	
 	.content-header {
 		color: #00b048;
 	}
 	
 	.content-body {
 		margin-top: 34px;
+		margin-right: 8px;
 	}
 }

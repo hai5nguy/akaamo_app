@@ -35,7 +35,7 @@ module.exports = {
       {
         test: /\.html$/,
         use: [ 'file-loader?name=[name].[ext]' ],
-        include: /src/
+        include: /frontend\/src/
       },
       {
         test: [
@@ -47,7 +47,7 @@ module.exports = {
         test: /\.(png|ico|svg|gif)$/,
         use: [ 'url-loader?limit=10000' ],
         include: [
-            resolve(__dirname, 'src/images/')
+            resolve(__dirname, 'frontend/src/assets/')
         ]
       }
     ]
