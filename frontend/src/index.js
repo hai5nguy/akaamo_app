@@ -2,7 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
-import Root from './components/Root'
+import Root from './containers/Root'
+
+import './index.html';
+
+import './pwa/manifest.json';
+import './pwa/serviceworker.js';
+import './pwa/icon.png';
+
+
 
 const render = Component => {
   ReactDOM.render(
@@ -16,5 +24,5 @@ const render = Component => {
 render(Root)
 
 if (module.hot) {
-  module.hot.accept('./components/Root', () => { render(Root) })
+  module.hot.accept('./containers/Root', () => { render(Root) })
 }
