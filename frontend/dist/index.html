@@ -1,11 +1,23 @@
+<!DOCTYPE html>
 <html>
-    <head>
-      <title>React Hot Loader Minimal Boilerplate</title>
-    </head>
+<head>
+    <title>Alpha Mu Omega Chapter | Alpha Kappa Alpha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+</head>
     <body>
-      <div id="root"></div>
-  
-      <script src="app.js"></script>
+        <div id="root"></div>
+        <script src="app.js"></script>
+        <script type="text/javascript">
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/serviceworker.js')
+                    .then(function(registration) {
+                        console.log('Registration successful, scope is:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('Service worker registration failed, error:', error);
+                    });
+            }
+        </script>
     </body>
-  </html>
-  
+</html>
