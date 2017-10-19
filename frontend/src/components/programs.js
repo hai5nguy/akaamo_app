@@ -1,16 +1,16 @@
 import React from 'react';
 
 import Card from './expandable-card';
-import info from '../assets/about-card-info.js';
+import info from '../assets/program-card-info.js';
 
 import '../styles/card.scss';
 
-class About extends React.Component {
+class Programs extends React.Component {
 	render () {
 		const cards = info.map(card => (<Card info={card} />));
 
 		return (<div className="about-us">
-			<div className="content-header">About Us</div>
+			<div className="content-header">Programs</div>
 			<div className="content-body">
 				{cards}
 			</div>
@@ -18,4 +18,4 @@ class About extends React.Component {
 	}	
 }
 
-export default About;
+export default Programs;
