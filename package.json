@@ -2,10 +2,13 @@
   "name": "name",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "7.10.1"
+  },
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --history-api-fallback --open",
-    "test": "mocha ./backend/**/*.test.js"
+    "test": "mocha ./backend/**/*.test.js",
+    "start": "webpack-dev-server --hot --history-api-fallback"
   },
   "repository": {
     "type": "git",
@@ -19,8 +22,14 @@
   },
   "homepage": "https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate#readme",
   "dependencies": {
+    "css-loader": "^0.28.7",
+    "node-sass": "^4.5.3",
+    "express": "https://registry.npmjs.org/express/-/express-4.14.1.tgz",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-burger-menu": "^2.1.9",
+    "react-dom": "^15.4.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -29,7 +38,9 @@
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "mocha": "^4.0.1",
+    "file-loader": "^1.1.5",
     "react-hot-loader": "^3.0.0-beta.6",
+    "url-loader": "^0.6.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1"
   }
