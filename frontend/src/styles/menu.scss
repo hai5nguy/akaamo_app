@@ -24,6 +24,10 @@
 }
 
 /* General sidebar styles */
+.bm-menu-wrap {
+	left: 0px;
+}
+
 .bm-menu {
 	background: #fdb6d4;
 	padding: 2.5em 1.5em 0;
@@ -48,4 +52,7 @@
 
 .menu-item {
 	font-family: 'Raleway', Arial, sans-serif;
+	cursor: pointer;
+	padding-bottom: 13px;
+	color: #00b048;
 }
