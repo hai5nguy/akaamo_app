@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --history-api-fallback --open"
+    "start": "webpack-dev-server --hot --history-api-fallback"
   },
   "repository": {
     "type": "git",

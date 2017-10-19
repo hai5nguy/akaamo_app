@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const path = require('path');
 const { resolve } = require('path');
 
 
@@ -9,11 +8,11 @@ module.exports = {
     'app': [
       'babel-polyfill',
       'react-hot-loader/patch',
-      './src/index'
+      './frontend/src/index'
     ]
   },
   output: {
-    path: path.resolve(__dirname, './frontend/dist'),
+    path: resolve(__dirname, './frontend/dist'),
     filename: '[name].js'
   },
   module: {
@@ -40,7 +39,7 @@ module.exports = {
       },
       {
         test: [
-            resolve(__dirname, 'src/pwa/'),
+            resolve(__dirname, 'frontend/src/pwa/'),
         ],
         use: [ 'file-loader?name=[name].[ext]' ]                
       },
