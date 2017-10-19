@@ -12,7 +12,6 @@ class About extends React.Component {
 		return (<div className="about-us">
 			<div className="content-header">About Us</div>
 			<div className="content-body">
-				<div className="about-text">This is an about us section</div>
 				{cards}
 			</div>
 		</div>);
