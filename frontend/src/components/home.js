@@ -1,8 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import EventPanel from './event-panel.js';
 
 import '../styles/home.scss';
+
+const mapStateToProps = (state, ownProps) => {
+	return {
+		events: state.events
+	}
+}
+
 
 class Home extends React.Component {
 	render () {
@@ -13,18 +21,19 @@ class Home extends React.Component {
 			location: 'Indiana Roof Ballroom'
 		};
 
+		var yo = this.props.events;
+
 		return (
 			<div className="home">
+				<div> ccc:  {yo}</div>
 				<div className="content-header">Home</div>
 				<div className="home-logo"></div>
-				<EventPanel data={data} />
-				<EventPanel data={data} />
-				<EventPanel data={data} />
-				<EventPanel data={data} />
 				<EventPanel data={data} />
 			</div>
 		);
 	}	
 }
 
-export default Home;
+// export default Home;
+
+export default connect(mapStateToProps)(Home)
